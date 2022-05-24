@@ -96,8 +96,10 @@ $copyright = strip_tags(
 <?php wp_footer(); ?>
 <script type="text/javascript">
     jQuery(document).ready(function() {
+
         jQuery('.language-bash').each(function(i, e) {
-            jQuery(this).wrapAll(`<div class='code-toolbar'></div>`).parent().append(`<div class="toolbars">
+            jQuery(this).wrapAll(`<div class='code-toolbar'></div>`).parent().append(`
+            <div class="toolbars">
                 <div class="toolbar-item"><button>Copy</button></div>
             </div>`)
         })
@@ -116,6 +118,7 @@ $copyright = strip_tags(
             jQuery('.toolbar-item button').text('Copy')
             jQuery(this).find('.toolbar-item button').text('').text('Copied!')
         })
+
     })
 </script>
 </body>
