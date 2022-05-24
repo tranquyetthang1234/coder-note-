@@ -1797,9 +1797,10 @@ p {
 ul,
 ol {
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
     padding-left: 18px;
     line-height: 1.8;
+    
 }
 
 ul ul,
@@ -8195,7 +8196,8 @@ label.bbr-topic-resolution {
     margin: 0 auto;
 }
 #fury-content pre {
-    border-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
     color: rgb(255, 255, 255);
     display: block;
     margin: 1em 0px;
@@ -8203,6 +8205,86 @@ label.bbr-topic-resolution {
     padding: 1em;
     white-space: normal;
     overflow-wrap: normal;
-    background-color: #ffffff;
-    background-image: linear-gradient(90deg, #5540d9 0%, #ee2762 100%) !important;
+    /* background-color: #ffffff; */
+    /* background-image: linear-gradient(90deg, #5540d9 0%, #ee2762 100%) !important; */
+    background-color: rgb(8, 27, 75);
+    overflow: auto;
+    padding: 1em;
+    white-space: normal;
+    overflow-wrap: normal;
+    margin-top: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  
+}
+
+#fury-content pre code {
+    font-size: inherit;
+    color: inherit;
+    word-break: normal;
+    background: 0px center;
+    border-radius: 0px;
+    color: inherit;
+    padding: 0px;
+    white-space: pre;
+}
+
+#fury-content pre.prefixed code {
+    white-space: normal;
+}
+#fury-content pre.prefixed code ol {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#fury-content .code-label {
+    background-color: rgb(214, 220, 234);
+    border-radius: 16px 16px 0px 0px;
+    color: rgb(36, 51, 90);
+    display: block;
+    font-size: 14px;
+    margin: 1em 0px 0px;
+    padding: 0.5em 1em;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+span.token.class-name {
+    color: red !important;
+}
+span.token.function {
+    color: red !important;
+}
+
+#fury-content .code-toolbar > .toolbars {
+    position: absolute;
+    right: 12px;
+    top: 14px;
+}
+#fury-content .code-toolbar > .toolbars > .toolbar-item{
+    display: inline-block;
+}
+
+#fury-content .code-toolbar > .toolbars > .toolbar-item button{
+    border-radius: 8px;
+    cursor: pointer;
+}
+#fury-content .code-toolbar > .toolbars > .toolbar-item button:hover{
+    background: rgb(73, 148, 255);
+    color: rgb(0, 12, 43);
+}
+
+#fury-content .code-toolbar{
+    margin: 1em 0px;
+    position: relative;
+}
+
+#fury-content pre[class*="language-"] > code .token.boolean, #fury-content pre[class*="language-"] > code .token.attr-name, #fury-content pre[class*="language-"] > code .token.color, #fury-content pre[class*="language-"] > code .token.string, #fury-content pre[class*="language-"] > code .token.variable {
+    color: rgb(41, 227, 171);
+}
+
+#fury-content pre.prefixed code ol li {
+    white-space: pre !important;
 }
